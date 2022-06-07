@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 4 version
+*/
+
 body{
     font-family: 'Open Sans';
 }
@@ -20,8 +27,12 @@ body{
     font-size: 18px;
     width: 100%;
     height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     background-color:rgb(52, 48, 48);
     opacity: 90%;
     position: relative;
@@ -32,6 +43,8 @@ body{
 
 
 ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     z-index: 10;
 }
@@ -56,6 +69,8 @@ li{
     height: 3px;
     background-color: #dbd6d6;
     margin-bottom: 6px;
+    -webkit-transition: 0.4s linear;
+    -o-transition: 0.4s linear;
     transition: 0.4s linear;
     border-radius: 20px;
 }
@@ -82,12 +97,20 @@ li{
         display: none;
     }
     .navbar-wrapper{
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         padding: 0;
     }
     ul{
-        flex-direction: column;
-        align-items: left;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: left;
+            -ms-flex-align: left;
+                align-items: left;
     }
     .navbar.activenav{
         display: block;
@@ -96,11 +119,15 @@ li{
         display: none;
     }
     .bar-1.rotatebar1{
-        transform: rotate(45deg) translate(-5px, -1px);
+        -webkit-transform: rotate(45deg) translate(-5px, -1px);
+            -ms-transform: rotate(45deg) translate(-5px, -1px);
+                transform: rotate(45deg) translate(-5px, -1px);
         
     }
     .bar-3.rotatebar3{
-        transform: rotate(-45deg) translate(6px, -10px);
+        -webkit-transform: rotate(-45deg) translate(6px, -10px);
+            -ms-transform: rotate(-45deg) translate(6px, -10px);
+                transform: rotate(-45deg) translate(6px, -10px);
     }
     
 }
@@ -112,9 +139,19 @@ li{
 .slide{
     width: 100%;
     position: relative;
-    animation-name:fade;
-    animation-duration:1s;
+    -webkit-animation-name:fade;
+            animation-name:fade;
+    -webkit-animation-duration:1s;
+            animation-duration:1s;
 }
+@-webkit-keyframes fade{
+    from{
+      opacity:0.4;
+    }
+    to{
+      opacity:1;
+    }
+  }
 @keyframes fade{
     from{
       opacity:0.4;
@@ -128,14 +165,17 @@ li{
     width: 100%;
     max-height: 500px;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .arrow{
     position: absolute;
     z-index: 5;
     top:50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -174,9 +214,14 @@ li{
     margin-top: 20px;
 }
 .popular-places-div{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     
 }
 .places-child{
@@ -209,7 +254,8 @@ li{
 
 
 .img-div:hover{
-    box-shadow: 15px 15px 15px #88888888;
+    -webkit-box-shadow: 15px 15px 15px #88888888;
+            box-shadow: 15px 15px 15px #88888888;
     opacity: 80%;
     
 }
@@ -223,9 +269,14 @@ li{
     border-radius: 10px;
 }
 .interest-wrapper{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     max-width: 650px;
     width: 100%;
 }
@@ -234,22 +285,38 @@ li{
 /*  */
 @media(max-width:1156px){
     #section-3{
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
  }
 
  @media(max-width:635px){
     .interest-wrapper{
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
  }
 
 #section-3{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .june-img{
    max-width: 500px;
@@ -316,7 +383,8 @@ li{
 }
 
 .interest-img:hover{
-    box-shadow: 10px 0 15px #88888888;
+    -webkit-box-shadow: 10px 0 15px #88888888;
+            box-shadow: 10px 0 15px #88888888;
 }
 .find-more-a{
     color: white;
@@ -354,9 +422,14 @@ li{
 }
 .plan-wrapper{
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: 0 auto;
     
     
@@ -370,7 +443,8 @@ li{
     border-radius: 25px;
 }
 .child-plan:hover{
-    box-shadow: 10px 0 15px #88888888;
+    -webkit-box-shadow: 10px 0 15px #88888888;
+            box-shadow: 10px 0 15px #88888888;
     border-radius: 25px;
     background-color:rgb(226, 222, 222);
 }
@@ -433,10 +507,15 @@ li{
 
 }
 #app{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     width: 100%;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: 0 auto;  
     margin-bottom: 50px;
 }
@@ -487,9 +566,13 @@ li{
 
 
 .contact-child-div{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 20px 20px 20px 0;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     color: rgb(195, 192, 192);
 }
 .contact-icon{
@@ -509,12 +592,17 @@ li{
     left: 37%;
 }
 .contact-form{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background-color:black; 
     opacity: 80%;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .contact-div{
@@ -546,7 +634,10 @@ li{
     padding: 20px;
 }
 #registration{
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     font-size: 12px;
     color: #fff;
     
@@ -556,9 +647,15 @@ li{
     border-bottom:2px solid black;
     border-radius: 5px;
     padding: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     background-color:#3e3939;
     margin-top: 10px;
     
@@ -599,9 +696,15 @@ button:hover{
     color: #dbd6d6;
     background-color:black;
     opacity: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 20px;
     font-size: 12px;
 }
